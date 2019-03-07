@@ -6,6 +6,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 require('../src/controllers/authController')(app);
+require('../src/controllers/projectController')(app);
 
 app.get('/', (req, res) => {
     res.send('api funfou');
